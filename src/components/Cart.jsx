@@ -1,8 +1,11 @@
-const Cart = () => {
+import { useOutletContext } from "react-router-dom";
+
+const Cart = ( ) => {
+      const { cartItems, setCartItems } = useOutletContext();
 
   return (
         <section>
-        <p>Cart section</p>
+        <p>{cartItems.length} items in cart</p>
         </section>
   );
   
