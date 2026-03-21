@@ -1,7 +1,7 @@
 nav {
     background-color: #3a3a3a;
     color: #ffffff;
-    padding: 1rem;
+    padding: 0.5rem;
    font-size: large;
 }
 nav ul {
@@ -43,4 +43,86 @@ footer {
 main {
     flex: 1;
     padding: 2rem;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  min-height: 80vh;
+  gap: 40px;
+ 
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 12px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  margin-top: 2rem;
+}
+
+.primary {
+  background: black;
+  color: white;
+  margin-right: auto;
+}
+
+.primary:hover {
+  background: #333;
+}
+
+.secondary {
+  border: 2px solid black;
+  color: black;
+}
+
+.secondary:hover {
+  background: black;
+  color: white;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
 }
