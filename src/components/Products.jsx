@@ -36,6 +36,7 @@ const Card = ( { cartItems, setCartItems } ) => {
             const newItem = {
                 id: cartItems.length + 1,
                 name: `Product ${cartItems.length + 1}`,
+                price: 19.99,
                 quantity: quantity
             };
             setCartItems(prev => [...prev, newItem]);

@@ -20,8 +20,10 @@ The homepage has fetched img from picsum.photos.
 An input field which lets a user manually type in how many items they want to buy. 
 An increment and decrement button next to it for fine-tuning. 
 
-When there are items in your cart, the cart page link in the navbar should indicate how many items are in your cart. This should update in real time as the user adds or removes items from their cart.
-On the cart page, you should display the items and their quantities, and allow users to increase/decrease the quantity of items in their cart (including removal if appropriate). There’s no need to implement any checkout/payment system.
+- When there are items in the cart, the cart page link in the navbar indicate how many items are in users cart. This updates in real time as the user adds or removes items from their cart.
+
+- On the cart page = allow users to increase/decrease the quantity of items in their cart (including removal). 
+
 Fetch your shop items from FakeStore API or something similar.
 Clear out any missing in props validation errors in your app!
 Make sure to test your app thoroughly using the React Testing Library. Be careful not to test react-router-dom directly, since it is an external library and the developers working on it must have tested the library already.
