@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom';
  
  
 
-function App() {
+function App(   ) {
 
     const [cartItems, setCartItems] = useState([]);
 
@@ -22,7 +22,7 @@ function App() {
         </button>
             <NavBar cartItems={cartItems} />
             <main>
-                <Outlet />
+                <Outlet context={ { cartItems, setCartItems } }/>
             </main>
              
 

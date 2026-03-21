@@ -1,12 +1,13 @@
 import "./styles/Products.css";
 import { useState } from "react";
+import { useOutletContext } from "react-router-dom";
 
 const Products = () => {
-
+        const { cartItems, setCartItems } = useOutletContext();
   return (
         <section className="productsSection">
         <h2>Products</h2>
-       <Card />
+       <Card cartItems={cartItems} setCartItems={setCartItems} />
               <Card />
                  <Card />
                     <Card />
@@ -20,7 +21,7 @@ export default Products;
 
 
 
-const Card = () => {
+const Card = ( { cartItems, setCartItems } ) => {
         const [quantity, setQuantity] = useState(1);
 
          const handleIncrease = () => {
@@ -31,6 +32,14 @@ const Card = () => {
             setQuantity(prev => (prev > 1 ? prev - 1 : 1));
          };     
 
+         const addToCart = () => {
+            const newItem = {
+                id: cartItems.length + 1,
+                name: `Product ${cartItems.length + 1}`,
+                quantity: quantity
+            };
+            setCartItems(prev => [...prev, newItem]);
+         }
 
 return (
             <div className="card">
@@ -44,7 +53,7 @@ return (
                                 )} />
                             <button onClick={handleIncrease}>+</button>
                     </div>
-                    <button className="add-to-cart">Add To Cart</button>
+                    <button onClick={addToCart} className="add-to-cart">Add To Cart</button>
             </div>
 );
   
