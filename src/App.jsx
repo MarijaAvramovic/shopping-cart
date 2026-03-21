@@ -7,9 +7,20 @@ import { Outlet } from 'react-router-dom';
 
 function App() {
 
+    const [cartItems, setCartItems] = useState([]);
+
+    function addCartItem(newItem) {
+        setCartItems(prev => [...prev, newItem]);
+    }
+
     return (
         <div className="App">
-            <NavBar />
+          { cartItems.length }
+        <button onClick={() => addCartItem({ id: cartItems.length + 1, name: `Product ${cartItems.length + 1}` })}>
+        add 
+
+        </button>
+            <NavBar cartItems={cartItems} />
             <main>
                 <Outlet />
             </main>

@@ -39,7 +39,9 @@ return (
                     <p>Product description goes here.</p>
                     <div className="quantity-control">
                             <button onClick={handleDecrease}>-</button>
-                            <input type="number" value={quantity} onChange={(e) => setQuantity(parseInt(e.target.value) || '')} />
+                            <input type="number" value={quantity} onChange={(e) => setQuantity(
+                                Math.max(1, parseInt(e.target.value) || 1)
+                                )} />
                             <button onClick={handleIncrease}>+</button>
                     </div>
                     <button className="add-to-cart">Add To Cart</button>
