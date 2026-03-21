@@ -1,0 +1,19 @@
+nav {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    padding: 1rem;
+   font-size: large;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding-inline: 2rem;
+}
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+nav ul li:nth-child(1) {
+    margin-right: auto;
+}
