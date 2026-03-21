@@ -16,7 +16,10 @@ Deploy
 The homepage has fetched img from picsum.photos.
 
 
-On the shop page, build individual card elements for each of your products. Display an input field on it, which lets a user manually type in how many items they want to buy. Also, add an increment and decrement button next to it for fine-tuning. You can also display a title for each product as well as an “Add To Cart” button.
+- On the shop page we have individual card elements for each product. 
+An input field which lets a user manually type in how many items they want to buy. 
+An increment and decrement button next to it for fine-tuning. 
+
 When there are items in your cart, the cart page link in the navbar should indicate how many items are in your cart. This should update in real time as the user adds or removes items from their cart.
 On the cart page, you should display the items and their quantities, and allow users to increase/decrease the quantity of items in their cart (including removal if appropriate). There’s no need to implement any checkout/payment system.
 Fetch your shop items from FakeStore API or something similar.
