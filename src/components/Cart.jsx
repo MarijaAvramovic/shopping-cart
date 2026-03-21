@@ -5,7 +5,13 @@ const Cart = ( ) => {
 
   return (
         <section>
-        <p>{cartItems.length} items in cart</p>
+      
+        <p>{cartItems.map(item => (
+            <div key={item.id}>
+                <h3>{item.name}</h3>
+                <p>Quantity: {item.quantity}</p>
+            </div>
+        ))}</p>
         </section>
   );
   
