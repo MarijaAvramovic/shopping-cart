@@ -10,13 +10,12 @@ Test everything
 Style
 Deploy
 
-A modern, responsive e-commerce storefront built with React. This project features a dynamic product catalog integrated with the FakeStoreAPI, a fully functional shopping cart.
+- This is my modern, responsive e-commerce storefront project built with React. 
 
-- components (navbar, productCard and CartItem)
+- I have three pages: a home page, a shop page, and a cart page. The user can navigate between the pages with a navigation bar, which is shown on all pages with children in router. 
+The homepage has fetched img from picsum.photos.
 
 
-You should have three pages: a home page, a shop page, and a cart page. Let the user navigate between the pages with a navigation bar, which will be shown on all pages.
-To your homepage, you can add whatever you’d like! A few images or information will be totally fine; it doesn’t have to be something fancy - it’s to test the concepts taught thus far.
 On the shop page, build individual card elements for each of your products. Display an input field on it, which lets a user manually type in how many items they want to buy. Also, add an increment and decrement button next to it for fine-tuning. You can also display a title for each product as well as an “Add To Cart” button.
 When there are items in your cart, the cart page link in the navbar should indicate how many items are in your cart. This should update in real time as the user adds or removes items from their cart.
 On the cart page, you should display the items and their quantities, and allow users to increase/decrease the quantity of items in their cart (including removal if appropriate). There’s no need to implement any checkout/payment system.
