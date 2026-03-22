@@ -1,17 +1,43 @@
 import "./styles/Products.css";
-import { useState } from "react";
+import { useState, useEffect} from "react";
 import { useOutletContext } from "react-router-dom";
 
 const Products = () => {
         const { cartItems, setCartItems } = useOutletContext();
+        const [products, setProducts] = useState([]);
+
+        useEffect(() => {
+
+            fetch('https://fakestoreapi.com/products')
+             .then(response => response.json())
+             .then(data => {
+                 setProducts(data);
+                console.log(data);
+             }
+               
+             )
+             .catch(error => console.error('Error fetching products:', error)
+             );
+         }, []); 
+
+
+
   return (
         <section className="productsSection">
         <h2>Products</h2>
-       <Card cartItems={cartItems} setCartItems={setCartItems} />
-              <Card />
-                 <Card />
-                    <Card />
+        <ul>
+            {products.map(product => (
+                <li key={product.id}>
+                    <h3>{product.category}</h3>
+                    <p>{product.title}</p>
+                    <p>${product.price}</p> 
 
+                </li>
+            ))}
+        </ul>
+       <Card products={products}
+       cartItems={cartItems} setCartItems={setCartItems} />
+               
         </section>
   );
   
@@ -21,7 +47,7 @@ export default Products;
 
 
 
-const Card = ( { cartItems, setCartItems } ) => {
+const Card = ( { products, cartItems, setCartItems } ) => {
         const [quantity, setQuantity] = useState(1);
 
          const handleIncrease = () => {
@@ -44,9 +70,9 @@ const Card = ( { cartItems, setCartItems } ) => {
 
 return (
             <div className="card">
-                    <div className="img"><img src="" alt="" /></div>
-                    <h3>Product Title</h3>
-                    <p>Product description goes here.</p>
+                    <div className="img"><img src={products[4].image} alt="" /></div>
+                    <h3>dsjsdk</h3>
+                    <p>dsds</p>
                     <div className="quantity-control">
                             <button onClick={handleDecrease}>-</button>
                             <input type="number" value={quantity} onChange={(e) => setQuantity(

@@ -25,6 +25,8 @@ An increment and decrement button next to it for fine-tuning.
 - On the cart page = allow users to increase/decrease the quantity of items in their cart (including removal). 
 
 Fetch your shop items from FakeStore API or something similar.
+
+
 Clear out any missing in props validation errors in your app!
 Make sure to test your app thoroughly using the React Testing Library. Be careful not to test react-router-dom directly, since it is an external library and the developers working on it must have tested the library already.
 As usual, style your application so you can show it off! You have a host of options provided already.
