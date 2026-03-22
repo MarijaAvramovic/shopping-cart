@@ -1,6 +1,8 @@
-- Odin Project Shopping Cart
+# Odin Project Shopping Cart
 
 * This is my modern, responsive e-commerce storefront project built with React. 
+
+- [Link Text](URL)
 
 * I have three pages: a home page, a shop page, and a cart page. The user can navigate between the pages with a navigation bar, which is shown on all pages with children in router. 
 The homepage has fetched img from picsum.photos.
