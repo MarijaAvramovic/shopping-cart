@@ -5,6 +5,10 @@ import NavBar from "../src/components/NavBar.jsx";
 import Home from "../src/components/Home.jsx";
 import App from "../src/App.jsx";
  
+import userEvent from '@testing-library/user-event';
+import { vi } from 'vitest';
+import '@testing-library/jest-dom'
+ 
 
  
 describe('NavBar component', () => {
@@ -93,6 +97,41 @@ describe('app component', () => {
     expect(screen.getByText(/Mocked Outlet/i)).toBeInTheDocument();
     expect(screen.getByText(/© 2026 The Odin Project/i)).toBeInTheDocument();
     expect(screen.getByText(/cart/i)).toBeInTheDocument();
+
+    
   });
 } );
 
+
+  describe('app componentt', () => {
+    it('renders the app component', () => {
+      const { container } = render(
+        <MemoryRouter>
+          <App />
+        </MemoryRouter>       
+      ); 
+      expect(container).toMatchSnapshot();
+    });
+it('navigates to   when   link is clicked', () => {
+  async () => {
+    const user = userEvent.setup();
+    render(
+      <MemoryRouter>
+        <App />
+      </MemoryRouter>       
+    );
+    await user.click(screen.getByRole('link', { name: /Cart/i }));
+    
+    expect(screen.getByText(/Mocked Outlet/i)).toBeInTheDocument();
+    await user.click(screen.getByRole('link', { name: /Home/i }));
+    expect(screen.getByText(/Mocked Outlet/i)).toBeInTheDocument();
+    await user.click(screen.getByRole('link', { name: /Products/i }));
+    expect(screen.getByText(/Mocked Outlet/i)).toBeInTheDocument();
+    await user.click(screen.getByRole('button', { name: /Cart/i }));
+    expect(screen.getByText(/Mocked Outlet/i)).toBeInTheDocument();
+    
+  }
+});
+  });
+
+ 

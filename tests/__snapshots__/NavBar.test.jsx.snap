@@ -1,0 +1,151 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`app component event > renders the app component 1`] = `
+<div>
+  <div
+    class="App"
+  >
+    <nav>
+      <ul>
+        <li>
+          <a
+            data-discover="true"
+            href="/"
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            data-discover="true"
+            href="/products"
+          >
+            Products
+          </a>
+        </li>
+        <li>
+          <a
+            data-discover="true"
+            href="/cart"
+          >
+            Cart 
+            <span>
+              0
+            </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <div>
+        Mocked Outlet
+      </div>
+    </main>
+    <footer>
+      <p>
+        © 2026 The Odin Project
+      </p>
+    </footer>
+  </div>
+</div>
+`;
+
+exports[`app componentt > renders the app component 1`] = `
+<div>
+  <div
+    class="App"
+  >
+    <nav>
+      <ul>
+        <li>
+          <a
+            data-discover="true"
+            href="/"
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            data-discover="true"
+            href="/products"
+          >
+            Products
+          </a>
+        </li>
+        <li>
+          <a
+            data-discover="true"
+            href="/cart"
+          >
+            Cart 
+            <span>
+              0
+            </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <div>
+        Mocked Outlet
+      </div>
+    </main>
+    <footer>
+      <p>
+        © 2026 The Odin Project
+      </p>
+    </footer>
+  </div>
+</div>
+`;
+
+exports[`products component > renders the products component 1`] = `
+<div>
+  <div
+    class="App"
+  >
+    <nav>
+      <ul>
+        <li>
+          <a
+            data-discover="true"
+            href="/"
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            data-discover="true"
+            href="/products"
+          >
+            Products
+          </a>
+        </li>
+        <li>
+          <a
+            data-discover="true"
+            href="/cart"
+          >
+            Cart 
+            <span>
+              0
+            </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <div>
+        Mocked Outlet
+      </div>
+    </main>
+    <footer>
+      <p>
+        © 2026 The Odin Project
+      </p>
+    </footer>
+  </div>
+</div>
+`;
