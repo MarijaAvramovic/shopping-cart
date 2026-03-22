@@ -5,6 +5,8 @@ import { useOutletContext } from "react-router-dom";
 const Products = () => {
         const { cartItems, setCartItems } = useOutletContext();
         const [products, setProducts] = useState([]);
+    const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(true);
 
         useEffect(() => {
 
@@ -16,11 +18,12 @@ const Products = () => {
              }
                
              )
-             .catch(error => console.error('Error fetching products:', error)
-             );
-         }, []); 
+              .catch((error) => setError(error))
+      .finally(() => setLoading(false));
+  }, []);
 
-
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>A network error was encountered</p>;
 
   return (
         <section className="productsSection">
