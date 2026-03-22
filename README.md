@@ -24,7 +24,7 @@ An increment and decrement button next to it for fine-tuning.
 
 - On the cart page = allow users to increase/decrease the quantity of items in their cart (including removal). 
 
-Fetch your shop items from FakeStore API or something similar.
+- Shop items fetched from FakeStore API.
 
 
 Clear out any missing in props validation errors in your app!

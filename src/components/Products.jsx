@@ -67,8 +67,12 @@ const Card = ( { product, cartItems, setCartItems } ) => {
                 quantity: quantity,
                 image: product.image,
             };
+
+            if (cartItems.some(item => item.id === newItem.id)) {
+                setCartItems(prev => prev.map(item => item.id === newItem.id ? { ...item, quantity: item.quantity + quantity } : item));
+            } else {
             setCartItems(prev => [...prev, newItem]);
-         }
+         }}
 
 return (
 
@@ -76,6 +80,7 @@ return (
                     <div className="img"><img src={product.image} alt={product.title} /></div>
                     <h3>{product.title}</h3>
                     <p>{product.category}</p>
+                    <p>${product.price.toFixed(2)}</p>
                     <div className="quantity-control">
                             <button onClick={handleDecrease}>-</button>
                             <input type="number" value={quantity} onChange={(e) => setQuantity(
@@ -87,4 +92,4 @@ return (
             </div>
 );
   
-};
+         };

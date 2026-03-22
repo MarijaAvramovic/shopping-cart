@@ -12,6 +12,14 @@
     margin-top: 20px;
     background-color: #f9f9f9;
 }   
+.cartSection img {
+    max-width: 50px;
+    display: block;
+    height: auto;
+    object-fit: cover;
+    margin-top: 10px;
+}
+
 .cartSection h2 {
     margin-bottom: 20px;
 }
@@ -19,9 +27,7 @@
     border-bottom: 1px solid #ddd;
     padding: 10px 0;
 }
-.cartSection div:last-child {
-    border-bottom: none;
-}
+
 .cartSection h3 {           
     margin: 0;
 }
