@@ -1,5 +1,8 @@
 # The Odin Project Shopping Cart
 
+![Alt text](src/assets/Screenshot%202026-03-22%20at%2011.28.44%20AM.png)
+
+
 * This is my modern, responsive e-commerce storefront project built with React. 
 
 - [Live Demo](https://shopping-cart-odin-project-marija.netlify.app/)
